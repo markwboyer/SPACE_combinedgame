@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 57f9fed547674e740a073a0f2aeb99ee
+  - enabled: 1
+    path: Assets/Scenes/Rover.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/MOUSE GameScene.unity
+    guid: e1e99f9396edbc9428c37b57e7adaa80
+  - enabled: 1
+    path: Assets/Scenes/Feedback.unity
+    guid: 5eb321ff08f06664488bd0cba25f32fc
+  - enabled: 1
+    path: Assets/Scenes/Surveys.unity
+    guid: 454f678517dbc804283972d03e951a70
+  - enabled: 0
+    path: Assets/Scenes/feedback-new.unity
+    guid: 532c0ff690ca32446bb893595962e94a
+  - enabled: 1
+    path: Assets/Scenes/Videos.unity
+    guid: 667d3b7f88d7cf44a9b18267e66eac29
+  - enabled: 0
+    path: Assets/Scenes/MOUSE StartMenu Scene.unity
+    guid: a914c1de1cc488743b40beb09626ca08
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d96238efed5d425459685598968383be, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 97942e05acf91e348a238216bda571da, type: 2}

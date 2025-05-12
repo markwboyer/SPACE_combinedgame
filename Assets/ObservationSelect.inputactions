@@ -1,0 +1,98 @@
+{
+    "name": "ObservationSelect",
+    "maps": [
+        {
+            "name": "ObservationMap",
+            "id": "2cf402e8-67a6-409a-a1fa-409548dfd7a2",
+            "actions": [
+                {
+                    "name": "MoveCursor",
+                    "type": "PassThrough",
+                    "id": "dcb1a557-32d3-445d-9048-c9c5feb1c1f6",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AddROSI",
+                    "type": "Button",
+                    "id": "26f636be-f481-45e5-9998-0c7be6a6b9b2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "Controller",
+                    "id": "172414c9-ebb6-407e-b911-212ab4cb6f2a",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveCursor",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "c2660cdd-1679-4063-a24a-4f238b283448",
+                    "path": "<HID::Logitech X52 Professional H.O.T.A.S.>/hat/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveCursor",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "52496de3-673a-4c96-8bc0-4a54cb46b70d",
+                    "path": "<HID::Logitech X52 Professional H.O.T.A.S.>/hat/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveCursor",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "a6934eeb-5b78-4964-895b-510a093c915f",
+                    "path": "<HID::Logitech X52 Professional H.O.T.A.S.>/hat/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveCursor",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "ac924ba8-ff5c-4031-ba22-486416177037",
+                    "path": "<HID::Logitech X52 Professional H.O.T.A.S.>/hat/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveCursor",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "3892227a-4def-4d00-9981-9d36dd50dcfc",
+                    "path": "<HID::Logitech X52 Professional H.O.T.A.S.>/button5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AddROSI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

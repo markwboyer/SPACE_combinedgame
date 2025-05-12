@@ -1,0 +1,48 @@
+# Ignore all except scripts and project settings
+# --- Root folders to ignore ---
+.vs/
+.vscode/
+Builds/
+Docs/
+Library/
+Logs/
+obj/
+UserSettings/
+
+# --- Unity generated files ---
+Temp/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+
+# --- Ignore Assets subfolders ---
+
+Assets/Obi/
+Assets/Robot/
+Assets/Samples/
+Assets/Terrain Generation/
+Assets/TextMesh Pro/
+Assets/Set_Of_Outdoor_Antennas/
+Assets/Videos/
+
+# --- Keep important source files ---
+!Assets/**/*.cs
+!Assets/**/*.shader
+!Assets/**/*.asmdef
+
+# --- ProjectSettings: include only the needed settings ---
+ProjectSettings/*
+!ProjectSettings/ProjectVersion.txt
+!ProjectSettings/EditorBuildSettings.asset
+!ProjectSettings/InputManager.asset
+!ProjectSettings/ProjectSettings.asset
+!ProjectSettings/TagManager.asset

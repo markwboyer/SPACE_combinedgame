@@ -1,0 +1,33 @@
+{
+    "name": "FlightJoystick",
+    "maps": [
+        {
+            "name": "FlightJoystick",
+            "id": "c9260c83-ac65-49c4-a316-8e01910b9a78",
+            "actions": [
+                {
+                    "name": "PitchRoll",
+                    "type": "Value",
+                    "id": "1784b27d-5901-4828-8fc8-e007b999c2e1",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "08740186-311f-4f75-8701-a93c23df590d",
+                    "path": "<Joystick>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PitchRoll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

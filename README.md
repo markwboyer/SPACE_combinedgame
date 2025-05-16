@@ -4,20 +4,34 @@ SPACE (Supervisory Piloting of Autonomously Crewed Explorers) Research Game\
 \
 This game is developed by Mark Boyer at CU-Boulder as part of his PhD research into Human-Autonomy Teaming.  This is for research purposes only.\
 \
-The object of the game is for the "MOUSE" (Mars Observation Unmanned Science Explorer) rover to visit as many scientific sites as possible to maximize Autonomy Task (AT) Score.\
+The object of the game is to maximize the combined score between the Manual Task (MT) and Autonomy Task (AT).  The MT is driving a rover (the L-EFANT: the Large Exploration For Astronaut Navigation
+of Terrain) on Mars using a joystick.  The object for the MT is to drive as efficiently as possible from one side of a boulder field to the other.  The AT is to guide the "MOUSE" 
+(Mars Observation Unmanned Science Explorer) rover to visit as many scientific sites as possible to maximize Autonomy Task (AT) Score.  The participant's job on the AT portion is to set the route for the
+MOUSE and monitor it for any faults.  There are "AI agents" to help make the routes automatically for MOUSE (in certain experimental conditions).\
 \
-AT Score is calculated as ATScore = 100 x NumberGoalsVisited - 2 x TimeDriving - 5 x TimeInHazard. \  
+MT Score is calculated by a lookup table for each map that has been previously tested for battery used. If the participant crashes the rover or cannot complete the route, the MT score is 0.\
 \
-To maximize score, players need to balance time vs. time in hazards to visit as many scientific sites as possible.\
+In the AT task, there are "goals" (scientific sites) to visit, boulders (cannot go through, but MOUSE can automatically route plan around), and hazards (ex: soft sand) that the MOUSE can go through with some
+penalty.  AT Score is calculated as ATScore = 100 x NumberGoalsVisited - 2 x TimeDriving - 5 x TimeInHazard. \  
+\
+To maximize AT score, players need to balance time vs. time in hazards to visit as many scientific sites as possible.\
 \
 There are 3 "AI Agents" that do the path planning.  One agent ("default") plans an optimal route using A*.  The other are suboptimal routes that a variations of hazard score weighting. The "zero cost" agent
-acts as if the hazards have zero cost, so this agent calculates the fastest route and does not avoid any hazards.  The "high cost" agent acts as if the hazards have a very high cost (500,000 vs. default=5),
+acts as if the hazards have zero cost, so this agent calculates the fastest route and does not avoid any hazards.  The "high cost" agent acts as if the hazards have a very high cost (50,000 vs. default=5),
 so it generates routes that avoids hazards at all costs, even going far out of its way.  In this way, the user is presented with 3 "AI Agents" to decide for route planning purposes.
-
+\
+# Background
+This game is a combination of two previous games: a CU Bioastronautics 3D rover game called MATRIKS (which controls LEFANT and the overall environment) and the AT game (developed by Mark Boyer).
+MATRIKS originally had several different components, several of which are disregarded and only the rover navigation is integrated. There may be many vestigial code elements.
 # **Scenes**
 
 ## StartMenu
-Updates player info (UserID, Trial Number), configuration (see below), and whether to save results to GitHub or not.  Should be 1 UserID per person.\
+This was the start menu from MATRIKS originally, and is the opening scene that you must start from.  Should select Mockup for the ARES cockpit to get proper screen setup (5 screens left to right: 1- computer,
+2- left TV (pilot), 3- right TV (copilot), 4- pilot display, 5- center display).  Have not attempted any work with VR but screen should bring up desktop version.  There's also an unused menu screen for "Algo"
+that was originally for MATRIKS algorithm testing- not used in SPACE.  Once you hit continue, will take you to the Sandbox menu.  Here you will see options for UserID (aka participant number), Session Number
+(aka Trial Number), Map difficulty (TBD on which ones), Seed (0 for random), and a dropdown for condition (A-I for explanation types).  Once you click Start, it will end that scene and trigger 2 new scenes:
+Rover (LEFANT) and MOUSE GameScene.  Should be one UserID per participant, and then 16+ trial numbers (maybe use 0 for training?)
+Updates player info (UserID, Trial Number), configuration (see below).  Should be 1 UserID per person.\
   Configs:  A - Manual Route only\
             B - No explanation condition\
             C - Global goal explanation only\
@@ -27,9 +41,8 @@ Updates player info (UserID, Trial Number), configuration (see below), and wheth
             G - Global + deductive\
             H - Deductive + contrastive\
             I - All explanations available\
-  Press start to transition to GameScene and begin gameplay.\
-  \
-GameScene - Contains all elements of the game play, including post-round surveys.\
+  
+MOUSE GameScene - Contains all elements of the game play, including post-round surveys.\
 \
 **Main Elements of Game**\
 The three primary scripts that control the game are: RoverDriving, AstartPathfinder, and BuildMap.
